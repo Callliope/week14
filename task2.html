@@ -13,8 +13,12 @@
 
 <body>
     <div class="container">
-
-
+        <label for="first">Введите число 1:</label>
+        <input type="text" class="form-control" id="first"></input>
+        <label for="second">Введите число 2:</label>
+        <input type="text" class="form-control" id="second"></input>
+    </div>
+    <div class="container">
 
         <input type="button" value="/" class="operator btn btn-danger btn-lg" onclick="divideFunction()"></input>
 
@@ -29,39 +33,41 @@
 
 
         <input type="button" value="+" class="operator btn btn-danger btn-lg" onClick="addFunction()"></input>
-
+        </br>
+        Рeзультат: <span id="result_multi"></span>
     </div>
+
     <script>
         function divideFunction() {
-            var x, y, operation, result;
-            x = prompt("Введите первое число");
-            y = prompt("Введите второе число");
-            operation = Number(x) / Number(y);
-            result = alert(operation)
+            var operation;
+            let x = document.getElementById("first");
+            let y = document.getElementById("second");
+            operation = Number(x.value) / Number(y.value);
+            document.getElementById('result_multi').innerHTML = operation;
         }
 
         function multiplyFunction() {
-            var x, y, operation, result;
-            x = prompt("Введите первое число");
-            y = prompt("Введите второе число");
-            operation = Number(x) * Number(y);
-            result = alert(operation)
+            var operation;
+            let x = document.getElementById("first");
+            let y = document.getElementById("second");
+            operation = Number(x.value) * Number(y.value);
+            document.getElementById('result_multi').innerHTML = operation;
         }
 
         function substractFunction() {
-            var x, y, operation, result;
-            x = prompt("Введите первое число");
-            y = prompt("Введите второе число");
-            operation = Number(x) - Number(y);
-            result = alert(operation)
+            var operation;
+            let x = document.getElementById("first");
+            let y = document.getElementById("second");
+            operation = Number(x.value) - Number(y.value);
+            document.getElementById('result_multi').innerHTML = operation;
         }
 
         function addFunction() {
-            var x, y, operation, result;
-            x = prompt("Введите первое число");
-            y = prompt("Введите второе число");
-            operation = Number(x) + Number(y);
-            result = alert(operation)
+            var operation;
+            let x = document.getElementById("first");
+            let y = document.getElementById("second");
+            operation = Number(x.value) + Number(y.value);
+            document.getElementById('result_multi').innerHTML = operation;
         }
     </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
