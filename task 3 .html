@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>задание 3</title>
+    <style>
+        #img {
+            margin-left: 30%;
+        }
+
+        #right,
+        #left {
+            width: 80px;
+            height: 70px;
+
+        }
+
+        #right {
+            margin-left: 24%;
+        }
+
+        #left {
+            margin-left: 30%;
+        }
+
+        h1 {
+            margin-left: 36%;
+            color: rgb(72, 47, 95);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Popovy sisters dolls gallery</h1>
+    </br>
+    <img id="img" width="620px" height="550px"
+        src="https://storage.gra.cloud.ovh.net/v1/AUTH_10e1a9235c63431c95e5b84a247830db/prod/artwork/514280_4_m.jpg"></img>
+    </br>
+    <img id="left" onclick="Switchtoleft(this)"
+        src="https://cdn.icon-icons.com/icons2/930/PNG/512/arrow-left_icon-icons.com_72376.png">
+    </img>
+    <img id="right" onclick="Switchtoright(this)"
+        src="https://cdn.icon-icons.com/icons2/930/PNG/512/arrow-right_icon-icons.com_72375.png"></img>
+    <script>
+        function Switchtoleft(sender) {
+            var picture = document.getElementById("img");
+            picture.src = "https://d32dm0rphc51dk.cloudfront.net/4ipjhB5lkGbbrVHkQvKugA/large.jpg";
+        }
+
+        function Switchtoright(sender1) {
+            var image = document.getElementById("img");
+            image.src =
+                "https://d7hftxdivxxvm.cloudfront.net/?resize_to=fit&width=800&height=753&quality=80&src=https%3A%2F%2Fd32dm0rphc51dk.cloudfront.net%2FDFsTmk3upQYe-IHvTq8_Lw%2Fnormalized.jpg";
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+    </script>
+
+</body>
+
+</html>
